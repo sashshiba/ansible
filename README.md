@@ -7,7 +7,7 @@
   tasks:
   - name: Install Nginx
     apt: name=nginx update_cache=yes state=latest
-  - name: Allow all access to tcp port 80
+  - name: Allow all access to tcp port 80, 22, 443
     community.general.ufw:
     rule: allow
     port: '80', '22', '443'
